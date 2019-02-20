@@ -4,7 +4,7 @@ import styled from "styled-components"
 
 const StyledNav = styled.div`
 display: flex;
-justify-content: space-between;
+justify-content: space-around;
 `
 
 class NavBar extends Component {
@@ -13,8 +13,8 @@ class NavBar extends Component {
             <StyledNav>
                 <div><Link to="/" >Home</Link></div>
                 <div><Link to="/about" >About</Link></div>
+                <div><Link to="/projects" >Projects</Link></div>
                 <div><Link to="/resume" >Resume</Link></div>
-                <div><Link to="/project/1" >Project</Link></div>
             </StyledNav>
         );
     }

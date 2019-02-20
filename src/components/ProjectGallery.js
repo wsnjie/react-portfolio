@@ -1,5 +1,25 @@
 import React, { Component } from 'react';
 import ProjectTile from './ProjectTile';
+import makeCarousel from 'react-reveal/makeCarousel'
+import Slide from 'react-reveal/Slide'
+import styled from "styled-components"
+
+const StyledGallery = styled.div`
+display: flex;
+flex-direction: column;
+align-content: space-around;
+`
+const Container = styled.div`
+  border: 1px solid black;
+  position: relative;
+  overflow: hidden;
+  width: 70vw;
+  height: 75vh;
+  margin: 0 auto;
+`
+
+const CarouselUI = ({ children }) => <Container>{children}</Container>;
+const Carousel = makeCarousel(CarouselUI);
 
 class ProjectGallery extends Component {
     state = {
@@ -19,16 +39,20 @@ class ProjectGallery extends Component {
     }
     render() {
         return (
-            <div>
+            <StyledGallery>
                 <h1>Projects</h1>
-                {this.state.projects.map((project) => {
-                    return <ProjectTile
-                        name={project.name}
-                        description={project.description}
-                        highlights={project.highlights}
-                    />
-                })}
-            </div>
+                <Carousel defaultWait={3000} maxTurns={20}>
+                    {this.state.projects.map((project, i) => {
+                        return (<Slide right key={i}><ProjectTile
+                            key={i}
+                            name={project.name}
+                            description={project.description}
+                            highlights={project.highlights}
+                        /></Slide>)
+                    })}
+                </Carousel>
+
+            </StyledGallery>
         );
     }
 }
