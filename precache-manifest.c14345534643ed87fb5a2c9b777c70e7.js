@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "cd494f4bad8019a727e4",
+    "revision": "20f339ff251c22f72725",
     "url": "/react-portfolio/static/css/main.20ed6e0f.chunk.css"
   },
   {
-    "revision": "cd494f4bad8019a727e4",
-    "url": "/react-portfolio/static/js/main.cd494f4b.chunk.js"
+    "revision": "20f339ff251c22f72725",
+    "url": "/react-portfolio/static/js/main.20f339ff.chunk.js"
   },
   {
     "revision": "1e4ad457277730ac33c8",
@@ -32,7 +32,7 @@ self.__precacheManifest = [
     "url": "/react-portfolio/static/media/festpack.87d80ab5.png"
   },
   {
-    "revision": "8201075254c4c61dd8d484f0e61565ee",
+    "revision": "c7d771d915cb9792cdf5e24985ed633c",
     "url": "/react-portfolio/index.html"
   }
 ];
