@@ -22,7 +22,7 @@ class App extends Component {
       return (<StyledHome><Home /></StyledHome>)
     }
     return (
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <div>
           <NavBar />
           <Switch>
