@@ -7,6 +7,11 @@ import simonimg from "../images/simon-desktop.png"
 import squadimg from "../images/squadapp.png"
 import festpackimg from "../images/festpack.png"
 
+const StyledTitle = styled.h1`
+color: #00A3A3;
+text-align: center;
+`
+
 const StyledGallery = styled.div`
 display: flex;
 flex-direction: column;
@@ -98,7 +103,7 @@ class ProjectGallery extends Component {
     render() {
         return (
             <StyledGallery>
-                <h1>Projects</h1>
+                <StyledTitle>Projects</StyledTitle>
                 <Carousel defaultWait={3000} maxTurns={6}>
                     {this.state.projects.map((project, i) => {
                         return (<Slide right key={i}><ProjectTile
