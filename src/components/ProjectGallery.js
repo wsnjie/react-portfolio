@@ -112,6 +112,7 @@ class ProjectGallery extends Component {
                             description={project.description}
                             highlights={project.highlights}
                             image={project.image}
+                            link={project.github}
                         /></Slide>)
                     })}
                 </Carousel>
